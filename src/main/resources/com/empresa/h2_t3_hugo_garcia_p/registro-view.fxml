@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.empresa.h2_t3_hugo_garcia_p.RegistroController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <children>
+        <Label text="Registro" style="-fx-font-size: 24px; -fx-text-fill: #4CAF50;" />
+
+        <VBox spacing="10">
+            <Label text="Nombre de usuario:" style="-fx-text-fill: #FF5722;" />
+            <TextField fx:id="usernameField" promptText="Ingrese su nombre de usuario" />
+
+            <Label text="Contraseña:" style="-fx-text-fill: #FF5722;" />
+            <PasswordField fx:id="passwordField" promptText="Ingrese su contraseña" />
+
+            <Label text="Confirmar contraseña:" style="-fx-text-fill: #FF5722;" />
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirme su contraseña" />
+
+            <Button fx:id="registrarButton" text="Registrar" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        </VBox>
+    </children>
+    <VBox.margin>
+        <Insets />
+    </VBox.margin>
+</VBox>

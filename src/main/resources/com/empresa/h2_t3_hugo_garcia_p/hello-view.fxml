@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.empresa.h2_t3_hugo_garcia_p.HelloController">
+    <children>
+        <TextField fx:id="nombreField" layoutX="20.0" layoutY="20.0" promptText="Nombre" style="-fx-padding: 10; -fx-border-color: #3498db; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #ecf0f1;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+        <TextField fx:id="apellidosField" layoutX="20.0" layoutY="60.0" promptText="Apellidos" style="-fx-padding: 10; -fx-border-color: #3498db; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #ecf0f1;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+        <TextField fx:id="correoField" layoutX="20.0" layoutY="100.0" promptText="Correo" style="-fx-padding: 10; -fx-border-color: #3498db; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #ecf0f1;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+        <TextField fx:id="edadField" layoutX="20.0" layoutY="140.0" promptText="Edad" style="-fx-padding: 10; -fx-border-color: #3498db; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #ecf0f1;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0" />
+
+        <ComboBox fx:id="searchField" layoutX="20.0" layoutY="220.0" prefWidth="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="220.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nombre" />
+                    <String fx:value="Edad" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <TextField fx:id="searchTerm" layoutX="180.0" layoutY="220.0" prefWidth="200.0" promptText="Término de búsqueda" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="220.0" />
+
+        <Button fx:id="searchButton" layoutX="400.0" layoutY="220.0" onAction="#handleSearch" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Buscar" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="220.0" />
+
+        <HBox layoutX="20.0" layoutY="200.0" spacing="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0" alignment="TOP_RIGHT">
+            <Button fx:id="addButton" onAction="#handleAdd" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Añadir" />
+            <Button fx:id="updateButton" onAction="#handleUpdate" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Modificar" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Eliminar" />
+            <Button fx:id="resetButton" text="Resetear Tabla" onAction="#handleReset" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+        </HBox>
+
+        <TableView fx:id="tableView" layoutX="20.0" layoutY="260.0" style="-fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #ecf0f1;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0">
+            <columns>
+                <TableColumn fx:id="nombreColumn" style="-fx-background-color: #3498db; -fx-font-weight: bold; -fx-border-color: #ffffff; -fx-border-width: 2 0 2 0;" text="Nombre" />
+                <TableColumn fx:id="apellidosColumn" style="-fx-background-color: #3498db; -fx-font-weight: bold; -fx-border-color: #ffffff; -fx-border-width: 2 0 2 0;" text="Apellidos" />
+                <TableColumn fx:id="correoColumn" style="-fx-background-color: #3498db; -fx-font-weight: bold; -fx-border-color: #ffffff; -fx-border-width: 2 0 2 0;" text="Correo" />
+                <TableColumn fx:id="edadColumn" style="-fx-background-color: #3498db; -fx-font-weight: bold; -fx-border-color: #ffffff; -fx-border-width: 2 0 2 0;" text="Edad" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
